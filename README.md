@@ -1,29 +1,29 @@
-# AI Agent 方法论合集
+# AI Agent Methodologies
 
-> 来自真实生产环境的调试与工程方法论。每一条都是用踩坑换来的。
+> Real-world debugging & engineering lessons from production failures.
 
-English | [简体中文](./README.zh.md)
+[简体中文](./README.zh.md)
 
-## 这是什么
+## What is this
 
-一组为 AI 编程助手（Claude Code、Cursor、Hermes Agent 等）设计的调试与工程方法论。每条方法论包含：
+A collection of debugging and engineering methodologies designed for AI coding assistants (Claude Code, Cursor, Hermes Agent, etc.). Each methodology includes:
 
-- **原则**：核心思想
-- **检查清单**：可直接执行的步骤
-- **反面案例**：真实踩坑经历
-- **适用场景**：什么时候用
+- **Principle** — core idea
+- **Checklist** — actionable steps
+- **Anti-pattern** — real failure case
+- **When to use** — applicable scenarios
 
-## 方法论列表
+## Methodologies
 
-| 方法论 | 核心思想 | 来源 |
-|--------|----------|------|
-| [约束优先排查](./skills/constraint-first-debugging/) | 先验证不可控层是否支持，再动手改代码 | 微信语音条发送失败 |
+| Methodology | Core Idea | Source |
+|-------------|-----------|--------|
+| [Constraint-First Debugging](./skills/constraint-first-debugging/) | Verify platform/API constraints before writing code | WeChat voice bubble failure |
 
-## 安装
+## Install
 
 ### Claude Code
 
-直接把 `CLAUDE.md` 放到项目根目录：
+Drop `CLAUDE.md` into your project root:
 
 ```bash
 curl -o CLAUDE.md https://raw.githubusercontent.com/ryan-flow/ai-agent-methodologies/main/CLAUDE.md
@@ -37,19 +37,19 @@ hermes skill install ryan-flow/ai-agent-methodologies
 
 ### Cursor
 
-复制 `.cursor/rules/methodologies.mdc` 到你的项目 `.cursor/rules/` 目录。
+Copy `.cursor/rules/methodologies.mdc` to your project's `.cursor/rules/` directory.
 
-### 手动
+### Manual
 
-`skills/` 目录下的每个方法论都是独立的 Markdown 文件，可以手动复制到任何地方使用。
+Each methodology under `skills/` is a standalone Markdown file — copy it anywhere.
 
-## 贡献
+## Contributing
 
-遇到新的坑？欢迎提交 PR！格式要求：
+Hit a new bug? PRs welcome! Format:
 
-1. 在 `skills/` 下新建目录
-2. 包含 `SKILL.md`（Hermes 格式）和 `METHODOLOGY.md`（通用格式）
-3. README 中的方法论列表里加上新条目
+1. Create a new directory under `skills/`
+2. Include `SKILL.md` (Hermes format) and `METHODOLOGY.md` (universal format)
+3. Add an entry to the methodology table in README
 
 ## License
 
